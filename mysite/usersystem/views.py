@@ -99,7 +99,7 @@ def update_user(request, myid):
         Clients.objects.filter(id=myid).update(gender=request.POST.get('gender', 'off'))
         Clients.objects.filter(id=myid).update(password=request.POST.get('password', 'off'))
 
-        return redirect('usersystem:all_users')
+        return redirect('usersystem:index')
     else:  # display empty form
         return HttpResponse("failed to update")
 
@@ -133,4 +133,12 @@ def login_admin(request):
         else:
             return HttpResponse('problem')
     
+
+def logout_user(request):
     
+    return redirect('usersystem:index')
+
+
+def logout_admin(request):
+    
+    return redirect('usersystem:index')

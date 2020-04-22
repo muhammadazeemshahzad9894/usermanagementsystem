@@ -14,8 +14,9 @@
 
 <body>
 <h1>Welcome to User Management System</h1>
-<a href="usersystem/userlogin"><button class="btn btn-primary cart">User Login</button></a>
-<a href="usersystem/adminlogin"><button class="btn btn-primary cart">Admin Login</button></a>
+<a href="{% url 'usersystem:userlogin' %}"><button class="btn btn-primary cart">User Login</button></a>
+<a href="{% url 'usersystem:adminlogin' %}"><button class="btn btn-primary cart">Admin Login</button></a>
+<a href="{% url 'usersystem:register' %}"><button class="btn btn-primary cart">Register New User?</button></a>
 
 </body>
 </html>

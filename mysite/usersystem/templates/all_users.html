@@ -18,6 +18,7 @@
             <div class="row text-center">
                 <div class="=col-md-12">
                     <a class="btn btn-primary" href="{% url 'usersystem:register' %}">Register New User</a>
+                    <a class="btn btn-primary" href="{% url 'usersystem:logout_admin' %}">Log Out</a>
                 </div>
             </div>
             <hr>
@@ -28,35 +29,35 @@
                         <table class="table table-bordered" id="content">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>CNIC</th>
-                                    <th>Date of Birth</th>
-                                    <th>Age</th>
-                                    <th>Gender</th>
-                                    <th>Password</th>
-                                    <th>Status</th>
+                                    <th class="text-center">ID</th>
+                                    <th class="text-center">First Name</th>
+                                    <th class="text-center">Last Name</th>
+                                    <th class="text-center">CNIC</th>
+                                    <th class="text-center">Date of Birth</th>
+                                    <th class="text-center">Age</th>
+                                    <th class="text-center">Gender</th>
+                                    <th class="text-center">Password</th>
+                                    <th class="text-center">Status</th>
                                     <th class="text-center" colspan="2">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                      {% for i in user %}
                                 <tr>
-                                    <td> {{i.id}} </td>
-                                    <td> {{i.firstname}} </td>
-                                    <td> {{i.lastname}} </td>
-                                    <td> {{i.cnic}} </td>
-                                    <td> {{i.dob}} </td>
-                                    <td> {{i.age}} </td>
-                                    <td> {{i.gender}} </td>
-                                    <td> {{i.password}} </td>
+                                    <td class="text-center"> {{i.id}} </td>
+                                    <td class="text-center"> {{i.firstname}} </td>
+                                    <td class="text-center"> {{i.lastname}} </td>
+                                    <td class="text-center"> {{i.cnic}} </td>
+                                    <td class="text-center"> {{i.dob}} </td>
+                                    <td class="text-center"> {{i.age}} </td>
+                                    <td class="text-center"> {{i.gender}} </td>
+                                    <td class="text-center"> {{i.password}} </td>
                                     {% if i.status == 0 %}
                                         <td class="text-center"><a href="{% url 'usersystem:approve_user' i.id %}"><button class="btn btn-danger">Not Approved</button></a></td>
                                     {% else  %}
                                         <td class="text-center"><a href="#"><button class="btn btn-success">Approved</button></a></td>
                                     {% endif %}
-                                    <td class="text-center"><a href="{% url 'usersystem:get_user' i.id %}" class="glyphicon glyphicon-pencil"></a></td>
+                                    
                                     <td class="text-center"><a href="{% url 'usersystem:delete_user' i.id %}"><span class="glyphicon glyphicon-trash"></span></a></td>
                                 </tr>
                             {% endfor %}  

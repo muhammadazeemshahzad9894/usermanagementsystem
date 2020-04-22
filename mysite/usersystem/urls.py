@@ -37,6 +37,8 @@ urlpatterns = [
     path('approve_user/<int:myid>', views.approve_user, name="approve_user"),
     path('login_user/', views.login_user, name="login_user"),
     path('login_admin/', views.login_admin, name="login_admin"),
+    path('logout_user/', views.logout_user, name="logout_user"),
+    path('logout_admin/', views.logout_admin, name="logout_admin"),
     
     
     
