@@ -1,0 +1,12 @@
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+    
+      <!-- Login Form -->
+      <form class="form-horizontal" action="{% url 'usersystem:login_admin' %}" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+        <input type="text" id="login" class="fadeIn second" name="username" placeholder="login">
+        <input type="password" id="password" class="fadeIn third" name="password" placeholder="password">
+        <button type="submit" class="fadeIn fourth" >Log On</button>      
+      </form>
+    </div>
+  </div> 

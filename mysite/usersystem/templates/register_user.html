@@ -1,0 +1,83 @@
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+
+
+<div class="container">
+    <h2 >New User Registration</h2><br>
+            <form class="form-horizontal" action="{% url 'usersystem:register_user' %}" name="UserForm" method="POST" enctype="multipart/form-data"> {% csrf_token %} 
+                <div class="form-group">
+                    <label for="firstname" class="col-sm-3 control-label">First Name*</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="firstname" required placeholder="First Name" class="form-control" autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-3 control-label">Last Name*</label>
+                    <div class="col-sm-9">
+                        <input type="text" name="lastname" required placeholder="Last Name" class="form-control">
+                    </div>
+                </div>
+                
+                
+                <div class="form-group">
+                    <label for="cnic" class="col-sm-3 control-label">CNIC* </label>
+                    <div class="col-sm-9">
+                        <input type="phoneNumber" name="cnic" required placeholder="CNIC" class="form-control">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dob" class="col-sm-3 control-label">Date of Birth*</label>
+                    <div class="col-sm-9">
+                        <input type="date" name="dob" required class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="age" class="col-sm-3 control-label">Age* </label>
+                    <div class="col-sm-9">
+                        <input type="phoneNumber" name="age" required placeholder="Age" class="form-control">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="gender" class="col-sm-3 control-label">Gender* </label>
+                    <div class="col-sm-9">
+                        <select class="form-control form-control-lg" name="gender">
+                            <option>Male</option>
+                            <option>Female</option>
+                          </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password" class="col-sm-3 control-label">Password*</label>
+                    <div class="col-sm-9">
+                        <input type="password" name="password" required id="password" placeholder="Password" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword" class="col-sm-3 control-label">Confirm Password*</label>
+                    <div class="col-sm-9">
+                        <input type="password" id="confirmpassword" required placeholder="Password" class="form-control">
+                    </div>
+                </div>
+                
+                
+                
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <span class="help-block">*Required fields</span>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </form> 
+        </div> 
+    
